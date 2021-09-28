@@ -3,10 +3,12 @@ require("dotenv").config({
 });
 
 const contentfulConfig = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID,
-  accessToken:
-    process.env.CONTENTFUL_ACCESS_TOKEN ||
-    process.env.CONTENTFUL_DELIVERY_TOKEN,
+  //spaceId: process.env.CONTENTFUL_SPACE_ID,
+  spaceId: 'zkn4xcc1l2ar',
+  accessToken:'Qj_sJReUKhga0FBjFceckc5vFRZ0ZvQT9paiGIos13o'
+
+  //  process.env.CONTENTFUL_ACCESS_TOKEN ||
+   // process.env.CONTENTFUL_DELIVERY_TOKEN,
 };
 
 // If you want to use the preview API please define
@@ -36,7 +38,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
+    title: "Beganyi Professional Corporation Law Firm",
     description: "Official Contentful Gatsby Starter",
   },
   pathPrefix: "/gatsby-contentful-starter",
@@ -46,6 +48,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
+    'gatsby-plugin-postcss',
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,

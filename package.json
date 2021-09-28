@@ -1,5 +1,5 @@
 {
-  "name": "contentful-starter-gatsby-blog",
+  "name": "BPC",
   "description": "Contentful Gatsby Starter Blog",
   "private": true,
   "version": "0.0.1",
@@ -8,6 +8,9 @@
     "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.1",
+    "@heroicons/react": "^1.0.4",
+    "@tailwindcss/forms": "^0.3.3",
     "gatsby": "^3.10.1",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-react-helmet": "^4.10.0",
@@ -22,8 +25,12 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.5",
     "contentful-import": "^7.8.6",
-    "netlify-cli": "^2.54.0"
+    "gatsby-plugin-postcss": "^4.14.0",
+    "netlify-cli": "^2.54.0",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.15"
   },
   "engines": {
     "node": ">=10.13.0"
