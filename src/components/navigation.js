@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon, ChartBarIcon, CursorClickIcon, ShieldCheckIcon,ViewGridIcon, RefreshIcon } from '@heroicons/react/outline'
 import ChevronDownIcon from '@heroicons/react/outline/esm/ChevronDownIcon'
+import { graphql } from 'gatsby'
 const solutions = [
   {
     name: 'Analytics',

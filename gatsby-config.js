@@ -3,12 +3,11 @@ require("dotenv").config({
 });
 
 const contentfulConfig = {
-  //spaceId: process.env.CONTENTFUL_SPACE_ID,
-  spaceId: 'zkn4xcc1l2ar',
-  accessToken:'Qj_sJReUKhga0FBjFceckc5vFRZ0ZvQT9paiGIos13o'
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken:
 
-  //  process.env.CONTENTFUL_ACCESS_TOKEN ||
-   // process.env.CONTENTFUL_DELIVERY_TOKEN,
+    process.env.CONTENTFUL_ACCESS_TOKEN ||
+    process.env.CONTENTFUL_DELIVERY_TOKEN,
 };
 
 // If you want to use the preview API please define

@@ -6,14 +6,16 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 import PracticeAreas from '../components/practiceareas'
+import Navigation from '../components/navigationv2'
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    const menu = get(this, 'props.data.allContentfulMenuItems.nodes')
 
     return (
       <Layout location={this.props.location}>
-          <Hero
+        <Hero
 
           />
         <PracticeAreas></PracticeAreas>
@@ -49,6 +51,19 @@ export const pageQuery = graphql`
         }
       }
     }
+    allContentfulMenuItems(sort: {order: ASC, fields: menupositionid}) {
+    nodes {
+      name
+      hasChildren
+      href
+      isChild
+      parentId {
+        name
+        menupositionid
+      }
+      menupositionid
+    }
+  }
     allContentfulPerson(
       filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
     ) {

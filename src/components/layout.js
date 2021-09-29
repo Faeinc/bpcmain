@@ -7,6 +7,7 @@ import Navigation from './navigationv2'
 import Footer from './footer'
 class Template extends React.Component {
   render() {
+
     const { children } = this.props
 
     return (
@@ -23,3 +24,4 @@ class Template extends React.Component {
 }
 
 export default Template
+
