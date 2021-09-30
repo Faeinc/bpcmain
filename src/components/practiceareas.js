@@ -11,6 +11,7 @@ export default function PracticeAreas() {
     nodes {
       practiceAreaId
       name
+      slug
       description {
         description
       }
@@ -48,7 +49,7 @@ export default function PracticeAreas() {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href={"/practice-areas/" + practiceAreas[0].slug}
                     className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                   >
                     Learn More
@@ -86,7 +87,7 @@ export default function PracticeAreas() {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href={"/practice-areas/" + practiceAreas[1].slug}
                     className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                   >
                     Learn More
@@ -124,7 +125,7 @@ export default function PracticeAreas() {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href={"/practice-areas/" + practiceAreas[2].slug}
                     className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                   >
                     Learn More
@@ -162,7 +163,7 @@ export default function PracticeAreas() {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href={"/practice-areas/" + practiceAreas[3].slug}
                     className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                   >
                     Learn More
@@ -200,7 +201,7 @@ export default function PracticeAreas() {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href={"/practice-areas/" + practiceAreas[4].slug}
                     className="inline-flex bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
                   >
                     Learn More

@@ -2,11 +2,11 @@ import React from 'react'
 
 const footerNavigation = {
   practiceAreas: [
-    { name: 'Business Law', href: '#' },
-    { name: 'Mergers & Acquisitions', href: '#' },
-    { name: 'Commercial Real Estate', href: '#' },
-    { name: 'Residential Real Estate', href: '#' },
-    { name: 'Tax, Wills & Estate Planning', href: '#' },
+    { name: 'Business Law', href: '/practice-areas/business-law' },
+    { name: 'Mergers & Acquisitions', href: '/practice-areas/mergers-and-acquisitions' },
+    { name: 'Commercial Real Estate', href: '/practice-areas/commercial-real-estate' },
+    { name: 'Residential Real Estate', href: '/practice-areas/residential-real-estate' },
+    { name: 'Tax, Wills & Estate Planning', href: '/practice-areas/tax' },
   ],
   support: [
     { name: 'Pricing', href: '#' },
