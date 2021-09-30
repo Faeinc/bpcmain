@@ -8,37 +8,50 @@ import {
   BookmarkAltIcon,
   CalendarIcon,
   ChartBarIcon,
-  CursorClickIcon,
+  ReceiptTaxIcon,
   MenuIcon,
   InboxIcon,
   AnnotationIcon,
   ChatAlt2Icon,
   QuestionMarkCircleIcon,
   SupportIcon,
-  ViewGridIcon,
+  PresentationChartBarIcon,
+  BriefcaseIcon,
+  OfficeBuildingIcon,
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const solutions = [
   {
-    name: 'Inbox',
+    name: 'Business Law',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
-    icon: InboxIcon,
+    href: '/practices-areas/business-law',
+    icon: BriefcaseIcon,
   },
   {
-    name: 'Messaging',
+    name: 'Commercial Real Estate',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: AnnotationIcon,
+    href: '/practice-areas/commercial-real-estate',
+    icon: OfficeBuildingIcon,
   },
-  { name: 'Live Chat', description: "Your customers' data will be safe and secure.", href: '#', icon: ChatAlt2Icon },
   {
-    name: 'Knowledge Base',
+    name: 'Mergers & Acquisitions',
     description: "Connect with third-party tools that you're already using.",
-    href: '#',
+    href: 'practice-areas/mergers-and-acquisitions',
+    icon: PresentationChartBarIcon,
+  },
+  {
+    name: 'Residential Real Estate',
+    description: "Connect with third-party tools that you're already using.",
+    href: 'practice-areas/residential-real-estate',
     icon: QuestionMarkCircleIcon,
+  },
+  {
+    name: 'Tax, Wills & Estates Planning',
+    description: "Connect with third-party tools that you're already using.",
+    href: 'practice-areas/tax',
+    icon: ReceiptTaxIcon,
   },
 ]
 
@@ -103,6 +116,7 @@ const Navigation = () => {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
+
             <Popover.Button
               className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
@@ -110,10 +124,16 @@ const Navigation = () => {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-
+            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Home
+            </a>
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              About Us
+            </a>
             <Popover className="relative">
               {({ open }) => (
                 <>
+
                   <Popover.Button
                     className={classNames(
                       open ? 'text-gray-900' : 'text-gray-500',
@@ -167,14 +187,12 @@ const Navigation = () => {
               )}
             </Popover>
 
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Pricing
+
+            <a href="/blog" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Blog
             </a>
             <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Partners
-            </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Company
+              Contact Us
             </a>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
