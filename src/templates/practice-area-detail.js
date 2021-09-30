@@ -51,9 +51,15 @@ export const getData = graphql`
         }
         priorityId
         descriptionImage {
-          gatsbyImageData(formats: AUTO, placeholder: BLURRED, resizingBehavior: SCALE)
+          gatsbyImageData(formats: AUTO, placeholder: BLURRED, resizingBehavior: FILL, width: 900)
           description
           title
+        fluid(maxWidth: 500) {
+            src
+            srcSetWebp
+            srcWebp
+            srcSet
+          }
         }
         description {
           description
