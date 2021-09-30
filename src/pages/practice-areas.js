@@ -6,9 +6,6 @@ import ArticlePreview from '../components/article-preview'
 export default function Component () {
   return (
     <Layout>
-      {/*<Hero
-
-          />*/}
       <PracticeAreas></PracticeAreas>
     </Layout>
   )

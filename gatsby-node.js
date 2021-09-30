@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve('./src/templates/blog-post.js')
-
+  const practiceAreaPage = path.resolve('./src/templates/practice-area-detail.js')
   const result = await graphql(
     `
       {
@@ -18,8 +18,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     `
   )
+  const practiceAreas = await graphql(
+    `
+    {
+      allContentfulPracticeAreas(sort: {fields: practiceAreaId, order: ASC}) 
+      {
+        nodes 
+        {
+          practiceAreaId
+          name
+          slug
+          description 
+          {
+            description
+          }
+        }
+      }
+    }
+`
+  )
 
-  if (result.errors) {
+  if (result.errors || practiceAreas.errors) {
     reporter.panicOnBuild(
       `There was an error loading your Contentful posts`,
       result.errors
@@ -28,6 +47,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allContentfulBlogPost.nodes
+  const practiceAreasResults = practiceAreas.data.allContentfulPracticeAreas.nodes
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
@@ -46,6 +66,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           slug: post.slug,
           previousPostSlug,
           nextPostSlug,
+        },
+      })
+    })
+  }
+  if (practiceAreasResults.length > 0) {
+    practiceAreasResults.forEach((practiceAreasResults, index) => {
+
+      createPage({
+        path: `/practice-areas/${practiceAreasResults.slug}/`,
+        component: practiceAreaPage,
+        context: {
+          slug: practiceAreasResults.slug,
+          practiceAreaId: practiceAreasResults.practiceAreaId,
+
         },
       })
     })
