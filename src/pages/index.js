@@ -7,6 +7,7 @@ import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 import PracticeAreas from '../components/practiceareas'
 import Navigation from '../components/navigationv2'
+
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')

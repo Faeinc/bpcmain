@@ -3,7 +3,7 @@ import InboxIcon from '@heroicons/react/outline/InboxIcon'
 import SparklesIcon from '@heroicons/react/outline/SparklesIcon'
 import { graphql, useStaticQuery } from 'gatsby'
 import BriefcaseIcon from '@heroicons/react/outline/BriefcaseIcon'
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 export default function PracticeAreas() {
   const getData = graphql`
     query practiceQuery {
@@ -15,6 +15,9 @@ export default function PracticeAreas() {
       description {
         description
       }
+      headerImager {
+          gatsbyImageData
+        }
     }
   }
 }
@@ -22,7 +25,7 @@ export default function PracticeAreas() {
 `
   const rawQuery = useStaticQuery(getData);
   const practiceAreas = rawQuery.allContentfulPracticeAreas.nodes;
-
+console.log(practiceAreas[0].headerImager.gatsbyImageData)
   return (
     <div className="relative pt-16 pb-32 overflow-hidden">
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
@@ -60,11 +63,9 @@ export default function PracticeAreas() {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                alt="Inbox user interface"
-              />
+              <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                image={practiceAreas[0].headerImager.gatsbyImageData} alt="temporary alternate" />
+
             </div>
           </div>
         </div>
@@ -98,11 +99,9 @@ export default function PracticeAreas() {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
-                alt="Customer profile user interface"
-              />
+              <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                           image={practiceAreas[1].headerImager.gatsbyImageData} alt="temporary alternate" />
+
             </div>
           </div>
         </div>
@@ -136,11 +135,9 @@ export default function PracticeAreas() {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                alt="Inbox user interface"
-              />
+              <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                           image={practiceAreas[2].headerImager.gatsbyImageData} alt="temporary alternate" />
+
             </div>
           </div>
         </div>
@@ -174,11 +171,9 @@ export default function PracticeAreas() {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
-                alt="Customer profile user interface"
-              />
+              <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                           image={practiceAreas[3].headerImager.gatsbyImageData} alt="temporary alternate" />
+
             </div>
           </div>
         </div>
@@ -212,11 +207,9 @@ export default function PracticeAreas() {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg"
-                alt="Inbox user interface"
-              />
+              <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                           image={practiceAreas[4].headerImager.gatsbyImageData} alt="temporary alternate" />
+
             </div>
           </div>
         </div>
