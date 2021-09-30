@@ -2,7 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import Hero from '../components/hero'
+import PracticeAreaHero from '../components/practice-area-hero'
 import FeatureDetail from '../components/feature-detail'
 import BlogIndex from '../pages/blog'
 import { graphql } from 'gatsby'
@@ -12,12 +12,12 @@ class PracticeAreaDetail extends React.Component {
   render() {
     const [practiceDetail] = get(this, 'props.data.allContentfulPracticeAreas.nodes')
     const practiceFeatureDetail = get(this, 'props.data.allContentfulPracticeAreaDetail.edges')
-
+    console.log(practiceDetail)
     return (
       <Layout location={this.props.location}>
         <Seo title="Practice-Areas" />
 
-        <Hero title="Practice-Areas" />
+        <PracticeAreaHero title="Practice-Areas" content={practiceDetail} />
         <FeatureDetail detail={practiceFeatureDetail} />
 
       </Layout>
@@ -35,6 +35,9 @@ export const getData = graphql`
       description {
         description
       }
+      headerImager {
+          gatsbyImageData(formats: AUTO, placeholder: BLURRED, resizingBehavior: FILL, width: 1500)
+        }
       slug
     }
   }
