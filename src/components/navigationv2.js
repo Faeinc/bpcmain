@@ -257,7 +257,7 @@ const Navigation = () => {
                     </a>
                   ))}
                 </div>
-                
+
               </div>
             </div>
           </Popover.Panel>

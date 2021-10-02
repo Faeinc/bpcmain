@@ -112,10 +112,11 @@ class Contact extends React.Component {
                       </defs>
                     </svg>
                   </div>
-                  <h3 className="text-lg font-medium text-white">Contact information</h3>
+                  <h3 className="text-lg font-medium text-white">Office Location</h3>
                   <p className="mt-6 text-base text-indigo-50 max-w-3xl">
-                    Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
-                    lacus arcu.
+                    102-2680 Matheson Boulevard East <br/>
+                    Mississauga, ON <br/>
+                    L4W 0A5
                   </p>
                   <dl className="mt-8 space-y-6">
                     <dt>
@@ -123,15 +124,15 @@ class Contact extends React.Component {
                     </dt>
                     <dd className="flex text-base text-indigo-50">
                       <PhoneIcon className="flex-shrink-0 w-6 h-6 text-indigo-200" aria-hidden="true" />
-                      <span className="ml-3">+1 (555) 123-4567</span>
+                      <span className="ml-3">Tel: +1 (647) 977-7749</span>
+                    </dd>
+                    <dd className="flex text-base text-indigo-50">
+                      <PhoneIcon className="flex-shrink-0 w-6 h-6 text-indigo-200" aria-hidden="true" />
+                      <span className="ml-3">Fax: +1 (888) 470-5151</span>
                     </dd>
                     <dt>
                       <span className="sr-only">Email</span>
                     </dt>
-                    <dd className="flex text-base text-indigo-50">
-                      <MailIcon className="flex-shrink-0 w-6 h-6 text-indigo-200" aria-hidden="true" />
-                      <span className="ml-3">support@workcation.com</span>
-                    </dd>
                   </dl>
                   <ul role="list" className="mt-8 flex space-x-12">
                     <li>
