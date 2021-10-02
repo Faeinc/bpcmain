@@ -38,19 +38,19 @@ const solutions = [
   {
     name: 'Mergers & Acquisitions',
     description: "Connect with third-party tools that you're already using.",
-    href: 'practice-areas/mergers-and-acquisitions',
+    href: '/practice-areas/mergers-and-acquisitions',
     icon: PresentationChartBarIcon,
   },
   {
     name: 'Residential Real Estate',
     description: "Connect with third-party tools that you're already using.",
-    href: 'practice-areas/residential-real-estate',
+    href: '/practice-areas/residential-real-estate',
     icon: QuestionMarkCircleIcon,
   },
   {
     name: 'Tax, Wills & Estates Planning',
     description: "Connect with third-party tools that you're already using.",
-    href: 'practice-areas/tax',
+    href: '/practice-areas/tax',
     icon: ReceiptTaxIcon,
   },
 ]

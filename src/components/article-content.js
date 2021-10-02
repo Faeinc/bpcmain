@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from './layout'
 /*
   This example requires Tailwind CSS v2.0+
 
@@ -17,7 +18,7 @@ import React from 'react'
 */
 export default function ArticleContent({ post }) {
   return (
-
+    <Layout location={this.props.location}>
     <div className="relative py-16 bg-white overflow-hidden">
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto">
@@ -34,5 +35,6 @@ export default function ArticleContent({ post }) {
 
       </div>
     </div>
+    </Layout>
   )
 }
