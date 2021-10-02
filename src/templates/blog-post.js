@@ -7,13 +7,14 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
+import ArticleContent from '../components/article-content'
+import BlogHero from '../components/blog-hero'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
-
     return (
       <Layout location={this.props.location}>
         <Seo
@@ -21,24 +22,20 @@ class BlogPostTemplate extends React.Component {
           description={post.description.childMarkdownRemark.excerpt}
           image={`http:${post.heroImage.resize.src}`}
         />
-        <Hero
+        <BlogHero content={post}></BlogHero>
+        {/*<Hero
           image={post.heroImage.gatsbyImageData}
           title={post.title}
           content={post.description.childMarkdownRemark.excerpt}
-        />
+        />*/}
+        <ArticleContent post={post}></ArticleContent>
         <div className={styles.container}>
-          <span className={styles.meta}>
+          {/*<span className={styles.meta}>
             {post.author.name} &middot;{' '}
             <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
             {post.body.childMarkdownRemark.timeToRead} minute read
-          </span>
+          </span>*/}
           <div className={styles.article}>
-            <div
-              className={styles.body}
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
             <Tags tags={post.tags} />
             {(previous || next) && (
               <nav>

@@ -25,7 +25,7 @@ export default function PracticeAreas() {
 `
   const rawQuery = useStaticQuery(getData);
   const practiceAreas = rawQuery.allContentfulPracticeAreas.nodes;
-console.log(practiceAreas[0].headerImager.gatsbyImageData)
+
   return (
     <div className="relative pt-16 pb-32 overflow-hidden">
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100" />
