@@ -87,7 +87,7 @@ const Navigation = () => {
     edges {
       node {
         logoRed {
-         gatsbyImageData(resizingBehavior: SCALE, height: 40)
+         gatsbyImageData(resizingBehavior: SCALE, height: 40, placeholder: TRACED_SVG)
           description
         }
       }
