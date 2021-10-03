@@ -100,11 +100,11 @@ const Footer = () => (
       <div className="xl:grid xl:grid-cols-4 xl:gap-8">
         <div className="grid grid-cols-3 gap-8 xl:col-span-3">
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact Us</h3>
+            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Contact Us</h3>
 
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Solutions</h3>
             <ul role="list" className="mt-4 space-y-4">
               {footerNavigation.practiceAreas.map((item) => (
                 <li key={item.name}>
@@ -116,7 +116,7 @@ const Footer = () => (
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Company</h3>
             <ul role="list" className="mt-4 space-y-4">
               {footerNavigation.company.map((item) => (
                 <li key={item.name}>
@@ -129,7 +129,7 @@ const Footer = () => (
           </div>
         </div>
         <div className="mt-12 xl:mt-0">
-          <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+          <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
             Subscribe to our newsletter
           </h3>
           <p className="mt-4 text-base text-gray-500">
@@ -159,7 +159,7 @@ const Footer = () => (
           </form>
         </div>
       </div>
-      <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
+      <div className="mt-12 border-t border-gray-600 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
         <div className="flex space-x-6 md:order-2">
           {footerNavigation.social.map((item) => (
             <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
@@ -168,7 +168,7 @@ const Footer = () => (
             </a>
           ))}
         </div>
-        <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+        <p className="mt-8 text-base text-gray-600 md:mt-0 md:order-1">
           &copy; 2021 Beganyi Professional Corporation. All rights reserved.
         </p>
       </div>
