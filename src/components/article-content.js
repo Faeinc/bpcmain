@@ -26,7 +26,7 @@ export default function ArticleContent({ post }) {
               {post.title}
             </span>
           </h1>
-          <p className="mt-6 text-xl text-gray-500 leading-8"
+          <div className="mt-6 text-xl text-gray-500 leading-8"
              dangerouslySetInnerHTML={{
                __html: post.body.childMarkdownRemark.html,
              }} />
