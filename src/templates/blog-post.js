@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import ArticleContent from '../components/article-content'
 import BlogHero from '../components/blog-hero'
+import Seo from '../components/seo'
 
 class BlogPostTemplate extends React.Component {
   render() {
