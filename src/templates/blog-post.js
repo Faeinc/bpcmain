@@ -29,36 +29,6 @@ class BlogPostTemplate extends React.Component {
           content={post.description.childMarkdownRemark.excerpt}
         />*/}
         <ArticleContent post={post}></ArticleContent>
-        <div className={styles.container}>
-          {/*<span className={styles.meta}>
-            {post.author.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body.childMarkdownRemark.timeToRead} minute read
-          </span>*/}
-          <div className={styles.article}>
-            <Tags tags={post.tags} />
-            {(previous || next) && (
-              <nav>
-                <ul className={styles.articleNavigation}>
-                  {previous && (
-                    <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
-                        ← {previous.title}
-                      </Link>
-                    </li>
-                  )}
-                  {next && (
-                    <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
-                        {next.title} →
-                      </Link>
-                    </li>
-                  )}
-                </ul>
-              </nav>
-            )}
-          </div>
-        </div>
       </Layout>
     )
   }

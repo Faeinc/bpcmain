@@ -58,7 +58,7 @@ class RootIndex extends React.Component {
           </div>
         </main>
         <PracticeAreas></PracticeAreas>
-       
+
 
       </Layout>
     )
