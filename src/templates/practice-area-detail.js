@@ -12,7 +12,6 @@ class PracticeAreaDetail extends React.Component {
   render() {
     const [practiceDetail] = get(this, 'props.data.allContentfulPracticeAreas.nodes')
     const practiceFeatureDetail = get(this, 'props.data.allContentfulPracticeAreaDetail.edges')
-    console.log(practiceDetail)
     return (
       <Layout location={this.props.location}>
         <Seo title="Practice-Areas" />

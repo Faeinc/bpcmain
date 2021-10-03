@@ -18,7 +18,6 @@ import Layout from './layout'
 */
 export default function ArticleContent({ post }) {
   return (
-    <Layout>
     <div className="relative py-16 bg-white overflow-hidden">
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto">
@@ -35,6 +34,5 @@ export default function ArticleContent({ post }) {
 
       </div>
     </div>
-    </Layout>
   )
 }

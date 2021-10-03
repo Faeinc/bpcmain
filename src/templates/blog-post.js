@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
-
-import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
-import Tags from '../components/tags'
-import * as styles from './blog-post.module.css'
 import ArticleContent from '../components/article-content'
 import BlogHero from '../components/blog-hero'
 
@@ -17,17 +12,13 @@ class BlogPostTemplate extends React.Component {
     const next = get(this.props, 'data.next')
     return (
       <Layout location={this.props.location}>
-        <Seo
+         <Seo
           title={post.title}
           description={post.description.childMarkdownRemark.excerpt}
           image={`http:${post.heroImage.resize.src}`}
         />
         <BlogHero content={post}></BlogHero>
-        {/*<Hero
-          image={post.heroImage.gatsbyImageData}
-          title={post.title}
-          content={post.description.childMarkdownRemark.excerpt}
-        />*/}
+
         <ArticleContent post={post}></ArticleContent>
       </Layout>
     )
