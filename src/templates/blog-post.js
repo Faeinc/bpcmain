@@ -19,7 +19,6 @@ class BlogPostTemplate extends React.Component {
           image={`http:${post.heroImage.resize.src}`}
         />
         <BlogHero content={post}></BlogHero>
-
         <ArticleContent post={post}></ArticleContent>
       </Layout>
     )
