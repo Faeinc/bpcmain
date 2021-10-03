@@ -111,7 +111,7 @@ const Navigation = () => {
         <div
           className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-auto">
-            <a href="#">
+            <a href="/">
               <span className="sr-only">Beganyi Professional Corporation</span>
               <GatsbyImage className="h-8 w-auto sm:h-10" alt={db.allContentfulBranding.edges[0].node.description} image={logoImage}></GatsbyImage>
 
