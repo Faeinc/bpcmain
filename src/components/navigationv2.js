@@ -5,22 +5,16 @@ import get from 'lodash/get'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  ChartBarIcon,
   ReceiptTaxIcon,
   MenuIcon,
-  InboxIcon,
-  AnnotationIcon,
-  ChatAlt2Icon,
   QuestionMarkCircleIcon,
-  SupportIcon,
   PresentationChartBarIcon,
   BriefcaseIcon,
   OfficeBuildingIcon,
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const solutions = [
   {
@@ -89,6 +83,16 @@ const Navigation = () => {
       menupositionid
     }
   }
+  allContentfulBranding {
+    edges {
+      node {
+        logoRed {
+         gatsbyImageData(resizingBehavior: SCALE, height: 40)
+          description
+        }
+      }
+    }
+  }
 }
 
 `
@@ -98,6 +102,7 @@ const Navigation = () => {
       const parentNodes = menuItems.filter(returnParentMenus);
       const childNodes = menuItems.filter(returnChildMenus);
       const practiceAreaNodes = childNodes.filter(returnPracticeAreas)
+      const logoImage = db.allContentfulBranding.edges[0].node.logoRed.gatsbyImageData
 
   return (
     <header>
@@ -105,14 +110,11 @@ const Navigation = () => {
       <Popover className="relative bg-white">
         <div
           className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex justify-start lg:w-0 lg:flex-auto">
             <a href="#">
               <span className="sr-only">Beganyi Professional Corporation</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                alt=""
-              />
+              <GatsbyImage className="h-8 w-auto sm:h-10" alt={db.allContentfulBranding.edges[0].node.description} image={logoImage}></GatsbyImage>
+
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
