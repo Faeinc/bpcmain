@@ -3,6 +3,9 @@ import React from 'react'
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import Layout from '../components/layout'
 class Contact extends React.Component {
+  handleSubmit(event) {
+    event.preventDefault();
+  }
   render() {
 
 
@@ -198,7 +201,7 @@ class Contact extends React.Component {
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                   <h3 className="text-lg font-medium text-gray-900">Send us a message</h3>
-                  <form action="/thank-you" method="POST" data-netlify="true" name="contact-us-form" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                  <form onSubmit={this.handleSubmit} method="POST" data-netlify="true" name="contact-us-form" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                     <div>
                       <label htmlFor="first-name" className="block text-sm font-medium text-gray-900">
                         First name
