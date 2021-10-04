@@ -1,30 +1,11 @@
 import React from 'react'
-import Layout from './layout'
-/*
-  This example requires Tailwind CSS v2.0+
-
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/typography'),
-    ],
-  }
-  ```
-*/
 export default function ArticleContent({ post }) {
   const text = post.body.childMarkdownRemark.html
   const split = text.split(' ');
   const half  = Math.floor((split.length/2))
   const firstHalfOfArray = split.slice(0, half).join(" ") + "</p>"
-  const secondHalfOfArray = "<p>"+ split.slice(split.length-half).join(" ")
+  const secondHalfOfArray = "<p>"+ split.slice(split.length-(half+1)).join(" ")
 
-
-  console.log(post)
   return (
     <div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-max lg:max-w-7xl mx-auto">
@@ -98,12 +79,12 @@ export default function ArticleContent({ post }) {
               </div>
             </div>
             <div className="mt-8 inline-flex rounded-md shadow">
-              <a
+             {/* <a
                 href="#"
                 className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
               >
                 Contact sales
-              </a>
+              </a>*/}
             </div>
           </div>
         </div>

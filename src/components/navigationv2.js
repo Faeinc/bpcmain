@@ -243,7 +243,7 @@ const Navigation = () => {
 
                         <div
                           className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-                         {/* <menuItem.icon className="h-6 w-6" aria-hidden="true"/>*/}
+                          <BriefcaseIcon className="h-6 w-6" aria-hidden="true"/>
                         </div>
                         <div className="ml-4 text-base font-medium text-gray-900">{menuItem.name}</div>
                       </a>
