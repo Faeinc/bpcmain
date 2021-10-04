@@ -2,9 +2,10 @@ import React from 'react'
 export default function ArticleContent({ post }) {
   const text = post.body.childMarkdownRemark.html
   const split = text.split(' ');
-  const half  = Math.floor((split.length/2))
-  const firstHalfOfArray = split.slice(0, half).join(" ") + "</p>"
-  const secondHalfOfArray = "<p>"+ split.slice(split.length-(half+1)).join(" ")
+  const bottomHalf  = Math.floor((split.length/2))
+  const topHalf  = Math.ceil((split.length/2))
+  const firstHalfOfArray = split.slice(0, bottomHalf).join(" ") + "</p>"
+  const secondHalfOfArray = "<p>"+ split.slice(split.length-(topHalf)).join(" ")
 
   return (
     <div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
