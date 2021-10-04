@@ -129,7 +129,7 @@ const Navigation = () => {
             <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Home
             </a>
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
               About Us
             </a>
             <Popover className="relative">
