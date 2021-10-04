@@ -20,7 +20,7 @@ const solutions = [
   {
     name: 'Business Law',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '/practices-areas/business-law',
+    href: '/practice-areas/business-law',
     icon: BriefcaseIcon,
   },
   {
