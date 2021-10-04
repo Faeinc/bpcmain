@@ -4,7 +4,7 @@ import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import Layout from '../components/layout'
 class Contact extends React.Component {
   handleSubmit(event) {
-    event.preventDefault();
+    
   }
   render() {
 
