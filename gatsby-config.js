@@ -86,6 +86,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://beganyi-law.com',
+        sitemap: 'https://beganyi-law.com/sitemap/sitemap-index.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
+    {
       resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
