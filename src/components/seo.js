@@ -21,7 +21,12 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image: metaImage
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
-
+  if (canonical){
+    const lastChar = canonical.charAt(str.length - 1)
+    if (lastChar ==="/"){
+      canonical.slice(-1);
+    }
+  }
   const image =
     metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
