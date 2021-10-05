@@ -92,7 +92,7 @@ module.exports = {
         sitemap: 'https://beganyi-law.com/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
