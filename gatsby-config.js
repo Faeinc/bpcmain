@@ -34,7 +34,7 @@ if (!spaceId || !accessToken) {
     "Contentful spaceId and the access token need to be provided."
   );
 }
-
+const siteUrl = `https://beganyi-law.com`
 module.exports = {
   siteMetadata: {
     title: "Beganyi Professional Corporation Law Firm",
@@ -51,9 +51,103 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     'gatsby-plugin-postcss',
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-19894247-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // Setting this parameter is optional
+        anonymize: false,
+        // Setting this parameter is also optional
+        respectDNT: false,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // Enables Google Optimize using your container Id
+        optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        // Enables Google Optimize Experiment ID
+        experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+        // Set Variation ID. 0 for original 1,2,3....
+        variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+        // Defers execution of google analytics script after page load
+        defer: false,
+        // Any additional optional fields
+        cookieDomain: "begany-law.com",
+        // defaults to false
+        enableWebVitalsTracking: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          allContentfulAsset(filter: {children: {elemMatch: {children: {elemMatch: {}}}}}) {
+    nodes {
+      children {
+        ... on ContentfulBlogPost {
+          id
+          slug
+        }
+        ... on ContentfulPracticeAreas {
+          id
+          name
+          slug
+        }
+      }
+    }
+  }
+          allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
+            nodes {
+              ... on WpPost {
+                uri
+                modifiedGmt
+              }
+              ... on WpPage {
+                uri
+                modifiedGmt
+              }
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+                         allSitePage: { nodes: allPages },
+                         allContentfulAsset: { nodes: allWpNodes },
+                       }) => {
+          const wpNodeMap = allWpNodes.reduce((acc, node) => {
+
+            const { uri } = node
+            acc[uri] = node
+
+            return acc
+          }, {})
+
+          return allPages.map(page => {
+            return { ...page, ...wpNodeMap[page.path] }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
+      },
     },
   ],
 };
