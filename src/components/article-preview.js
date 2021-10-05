@@ -96,7 +96,7 @@ export default function ArticlePreview({posts}) {
                       })
                     }
                   </p>
-                  <a href={"/blog/" + post.slug} className="block mt-2">
+                  <a href={"/blog/" + post.slug + "/"} className="block mt-2">
                     <p className="text-xl font-semibold text-gray-900">{post.title}</p>
                     {/*<p className="mt-3 text-base text-gray-500">{post.description.childMarkdownRemark}</p>*/}
                   </a>
