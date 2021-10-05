@@ -100,8 +100,10 @@ const Footer = () => (
       <div className="xl:grid xl:grid-cols-4 xl:gap-8">
         <div className="grid grid-cols-3 gap-8 xl:col-span-3">
           <div>
-            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Contact Us</h3>
-
+            <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase pb-5">Office Location</h3>
+            <p>102-2680 Matheson Boulevard East <br/>
+              Mississauga, ON<br/>
+              L4W 0A5</p>
           </div>
           <div>
             <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">Solutions</h3>
