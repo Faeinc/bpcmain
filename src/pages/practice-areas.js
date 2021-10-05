@@ -5,7 +5,7 @@ import ArticlePreview from '../components/article-preview'
 import Seo from '../components/seo'
 import AboutUs from './about-us'
 
-class PracticeAreas extends React.Component {
+class PracticeAreasListing extends React.Component {
   render() {
     return (
       <Layout>
@@ -17,4 +17,4 @@ class PracticeAreas extends React.Component {
     )
   }
 }
-export default PracticeAreas
+export default PracticeAreasListing
