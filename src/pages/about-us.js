@@ -1,11 +1,9 @@
-/* This example requires Tailwind CSS v2.0+ */
+
 import React from 'react'
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { ScaleIcon } from '@heroicons/react/outline'
 import Layout from '../components/layout'
-import ChevronRightIcon from '@heroicons/react/outline/ChevronRightIcon'
 import ExternalLinkIcon from '@heroicons/react/outline/ExternalLinkIcon'
 import Seo from '../components/seo'
-import RootIndex from './index'
 const features = [
   {
     name: 'We are Client Centric',
