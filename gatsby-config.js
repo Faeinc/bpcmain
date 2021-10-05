@@ -38,7 +38,10 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "Beganyi Professional Corporation Law Firm",
-    description: "Official Contentful Gatsby Starter",
+    description: "If you're looking for experienced representations, look no further than Beganyi Professional Corporation Law Firm",
+    siteUrl: "https://beganyi-law.com",
+    keywords: ["law firm", "mississauga", "real estate law", "commercial real estate law", "residential real estate law","business law", "commercial law", "corporate law", "estate planning", "tax planning"],
+
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [

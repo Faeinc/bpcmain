@@ -11,12 +11,16 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
+    const imageForSeo = post.heroImage
+      ? post.heroImage.resize
+      : null
     return (
       <Layout location={this.props.location}>
-         <Seo
+        <Seo
           title={post.title}
           description={post.description.childMarkdownRemark.excerpt}
-          image={`http:${post.heroImage.resize.src}`}
+          image={imageForSeo}
+          pathname={this.props.location.pathname}
         />
         <BlogHero content={post}></BlogHero>
         <ArticleContent post={post}></ArticleContent>
@@ -43,8 +47,10 @@ export const pageQuery = graphql`
       rawDate: publishDate
       heroImage {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
-        resize(height: 630, width: 1200) {
+        resize(width: 1200) {
           src
+          height
+          width
         }
       }
       body {
