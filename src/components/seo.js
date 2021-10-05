@@ -22,7 +22,7 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image: metaImage
   const defaultTitle = site.siteMetadata?.title
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   if (canonical){
-    const lastChar = canonical.charAt(str.length - 1)
+    const lastChar = canonical.charAt(canonical.length - 1)
     if (lastChar ==="/"){
       canonical.slice(-1);
     }
