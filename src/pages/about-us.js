@@ -4,6 +4,7 @@ import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@her
 import Layout from '../components/layout'
 import ChevronRightIcon from '@heroicons/react/outline/ChevronRightIcon'
 import ExternalLinkIcon from '@heroicons/react/outline/ExternalLinkIcon'
+import Seo from '../components/seo'
 const features = [
   {
     name: 'We are Client Centric',
@@ -50,6 +51,9 @@ const features = [
 export default function AboutUs() {
   return (
     <Layout>
+      <Seo
+        title="About Us"
+        pathname={this.props.location.pathname}/>
     <div className="py-12 bg-white">
       <div className="relative bg-gray-800 overflow-hidden">
         <div className="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">

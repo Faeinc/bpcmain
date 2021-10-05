@@ -2,6 +2,7 @@
 import React from 'react'
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import Layout from '../components/layout'
+import Seo from '../components/seo'
 class Contact extends React.Component {
   handleSubmit(event) {
 
@@ -10,7 +11,11 @@ class Contact extends React.Component {
 
 
     return (
+
       <Layout location={this.props.location}>
+        <Seo
+          title="Contact-Us"
+          pathname={this.props.location.pathname}/>
         <div className="bg-gray-100">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
             <div className="relative bg-white shadow-xl">

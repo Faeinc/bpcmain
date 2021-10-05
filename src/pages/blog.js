@@ -18,7 +18,9 @@ class BlogIndex extends React.Component {
     console.log(posts)
     return (
       <Layout location={this.props.location}>
-        <Seo title="Blog" />
+        <Seo
+          title="Blog"
+          pathname={this.props.location.pathname}/>
 
         {/*<Hero title="Blog" />*/}
         <section className="relative py-20 overflow-hidden">
