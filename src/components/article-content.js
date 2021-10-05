@@ -14,14 +14,6 @@ export default function ArticleContent({ post }) {
   const topHalf  = Math.ceil((split.length/2))
   const firstHalfOfArray = split.slice(0, bottomHalf).join(" ") + "</p>"
   const secondHalfOfArray = "<p>"+ split.slice(split.length-(topHalf)).join(" ")
-  const html = `
-  <p id="main">
-    <span class="prettify">
-      keep me and make me pretty!
-    </span>
-  </p>
-`;
-  let parse = ReactHtmlParser(html)
   let parse2 = ReactHtmlParser(firstHalfOfArray);
    parse2.forEach(
     function(item, index, arr) {
@@ -35,9 +27,6 @@ export default function ArticleContent({ post }) {
       }
     }
   )
-  console.log(parse)
-console.log(parse2)
-
 
 
   return (

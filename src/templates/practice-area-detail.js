@@ -14,7 +14,9 @@ class PracticeAreaDetail extends React.Component {
     const practiceFeatureDetail = get(this, 'props.data.allContentfulPracticeAreaDetail.edges')
     return (
       <Layout location={this.props.location}>
-        <Seo title="Practice-Areas" />
+        <Seo
+          title="Practice-Areas"
+          pathname={this.props.location.pathname}/>
 
         <PracticeAreaHero title="Practice-Areas" content={practiceDetail} />
         <FeatureDetail detail={practiceFeatureDetail} />

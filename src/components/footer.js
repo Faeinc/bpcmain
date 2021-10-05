@@ -15,7 +15,7 @@ const footerNavigation = {
     { name: 'API Status', href: '#' },
   ],
   company: [
-    { name: 'About', href: '/about' },
+    { name: 'About', href: '/about-us' },
     { name: 'Blog', href: '/blog' },
     { name: 'Guides', href: '#' },
   ],
