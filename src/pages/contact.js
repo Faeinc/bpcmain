@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { PhoneIcon } from '@heroicons/react/outline'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 class Contact extends React.Component {

@@ -67,7 +67,7 @@ export default function ArticlePreview({posts}) {
     <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
       <div className="relative">
         <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-          <h2 className="text-3xl font-semibold tracking-wider text-cyan-600 uppercase">Blogs</h2>
+          <h2 className="text-3xl font-semibold tracking-wider text-cyan-600 uppercase">Blog</h2>
         </div>
         <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
           {posts.map((post) =>{
@@ -96,7 +96,7 @@ export default function ArticlePreview({posts}) {
                       })
                     }
                   </p>
-                  <a href={"/blog/" + post.slug + "/"} className="block mt-2">
+                  <a href={"/blog/" + post.slug} className="block mt-2">
                     <p className="text-xl font-semibold text-gray-900">{post.title}</p>
                     {/*<p className="mt-3 text-base text-gray-500">{post.description.childMarkdownRemark}</p>*/}
                   </a>

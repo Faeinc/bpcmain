@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
 
             <div className="relative container px-4 mx-auto z-10">
               <div className="max-w-xl mx-auto lg:mx-0 py-12 pl-16 pr-32 bg-white clip-path-right-top">
-                <h3 className="mb-4 text-2xl font-semibold text-blue-800">  <a href={"/blog/" + firstPost.slug + "/"} className="hover:underline">
+                <h3 className="mb-4 text-2xl font-semibold text-blue-800">  <a href={"/blog/" + firstPost.slug} className="hover:underline">
                   {firstPost.title}
                 </a></h3>
                 <p className="mb-7 text-gray-500 text-base leading-relaxed"> <div dangerouslySetInnerHTML={{
