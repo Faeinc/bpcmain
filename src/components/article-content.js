@@ -34,9 +34,9 @@ export default function ArticleContent({ post }) {
       <div className="max-w-max lg:max-w-7xl mx-auto">
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <div className="text-base max-w-prose lg:max-w-none">
-            <h2 className="uppercase text-indigo-600 mt-2 text-2xl leading-8 font-semibold tracking-wide text-gray-900 sm:text-1xl">
+            <h1 className="uppercase text-indigo-600 mt-2 text-2xl leading-8 font-semibold tracking-wide text-gray-900 sm:text-1xl">
               {post.title}
-            </h2>
+            </h1>
           </div>
         </div>
         <div className="relative">
