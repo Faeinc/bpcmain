@@ -45,7 +45,7 @@ const FeatureDetail = (detail) => {
                          </a>
                          }*/}
                          <a
-                           href="#"
+                           href="/contact/"
                            className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                          >
                            Contact Us
@@ -97,7 +97,7 @@ const FeatureDetail = (detail) => {
                          </p>
                          <div className="mt-6">
                            <a
-                             href="#"
+                             href="/contact/"
                              className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                            >
                              Contact Us
