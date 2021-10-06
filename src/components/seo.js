@@ -68,6 +68,10 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image: metaImage
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: canonical,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
