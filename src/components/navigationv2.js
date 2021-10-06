@@ -19,31 +19,31 @@ const solutions = [
   {
     name: 'Business Law',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '/practice-areas/business-law',
+    href: '/practice-areas/business-law/',
     icon: BriefcaseIcon,
   },
   {
     name: 'Commercial Real Estate',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '/practice-areas/commercial-real-estate',
+    href: '/practice-areas/commercial-real-estate/',
     icon: OfficeBuildingIcon,
   },
   {
     name: 'Mergers & Acquisitions',
     description: "Connect with third-party tools that you're already using.",
-    href: '/practice-areas/mergers-and-acquisitions',
+    href: '/practice-areas/mergers-and-acquisitions/',
     icon: PresentationChartBarIcon,
   },
   {
     name: 'Residential Real Estate',
     description: "Connect with third-party tools that you're already using.",
-    href: '/practice-areas/residential-real-estate',
+    href: '/practice-areas/residential-real-estate/',
     icon: QuestionMarkCircleIcon,
   },
   {
     name: 'Tax, Wills & Estates Planning',
     description: "Connect with third-party tools that you're already using.",
-    href: '/practice-areas/tax',
+    href: '/practice-areas/tax/',
     icon: ReceiptTaxIcon,
   },
 ]
@@ -112,7 +112,7 @@ const Navigation = () => {
           <div className="flex justify-start lg:w-0 lg:flex-auto">
             <a href="/">
               <span className="sr-only">Beganyi Professional Corporation</span>
-              <GatsbyImage className="h-8 w-auto sm:h-10" alt={db.allContentfulBranding.edges[0].node.description} image={logoImage}></GatsbyImage>
+              <GatsbyImage className="h-8 w-auto sm:h-10" alt="Beganyi Professional Corporation Law Firm Logo" image={logoImage}></GatsbyImage>
 
             </a>
           </div>
@@ -128,7 +128,7 @@ const Navigation = () => {
             <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Home
             </a>
-            <a href="/about-us" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/about-us/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               About Us
             </a>
             <Popover className="relative">
@@ -167,7 +167,7 @@ const Navigation = () => {
                           {solutions.map((item) => (
                             <a
                               key={item.name}
-                              href={item.href}
+                              href={item.href + "/"}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
                               <div
@@ -189,10 +189,10 @@ const Navigation = () => {
             </Popover>
 
 
-            <a href="/blog" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/blog/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Blog
             </a>
-            <a href="/contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/contact/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Contact Us
             </a>
           </Popover.Group>
@@ -236,7 +236,7 @@ const Navigation = () => {
 
                       <a
                         key={menuItem.menupositionid}
-                        href={menuItem.href}
+                        href={menuItem.href +"/"}
                         className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       >
 
@@ -253,7 +253,7 @@ const Navigation = () => {
               <div className="py-6 px-5">
                 <div className="grid grid-cols-2 gap-4">
                   {practiceAreaNodes.map((menuItem) => (
-                    <a key={menuItem.menupositionid} href={menuItem.href} className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a key={menuItem.menupositionid} href={menuItem.href +"/"} className="text-base font-medium text-gray-900 hover:text-gray-700">
                       {menuItem.name}
                     </a>
                   ))}
