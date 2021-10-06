@@ -2,7 +2,7 @@ import React from 'react'
 import SparklesIcon from '@heroicons/react/outline/SparklesIcon'
 import { graphql, useStaticQuery } from 'gatsby'
 import BriefcaseIcon from '@heroicons/react/outline/BriefcaseIcon'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 export default function PracticeAreas() {
   const getData = graphql`
     query practiceQuery {
@@ -15,12 +15,12 @@ export default function PracticeAreas() {
         description
       }
       headerImager {
+          description
           gatsbyImageData
         }
     }
   }
 }
-
 `
   const rawQuery = useStaticQuery(getData);
   const practiceAreas = rawQuery.allContentfulPracticeAreas.nodes;
@@ -63,7 +63,7 @@ export default function PracticeAreas() {
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                image={practiceAreas[0].headerImager.gatsbyImageData} alt="temporary alternate" />
+                image={practiceAreas[0].headerImager.gatsbyImageData} alt={practiceAreas[0].headerImager.description} />
 
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function PracticeAreas() {
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                           image={practiceAreas[1].headerImager.gatsbyImageData} alt="temporary alternate" />
+                           image={practiceAreas[1].headerImager.gatsbyImageData} alt={practiceAreas[1].headerImager.description} />
 
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function PracticeAreas() {
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                           image={practiceAreas[2].headerImager.gatsbyImageData} alt="temporary alternate" />
+                           image={practiceAreas[2].headerImager.gatsbyImageData} alt={practiceAreas[2].headerImager.description} />
 
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function PracticeAreas() {
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                           image={practiceAreas[3].headerImager.gatsbyImageData} alt="temporary alternate" />
+                           image={practiceAreas[3].headerImager.gatsbyImageData} alt={practiceAreas[3].headerImager.description} />
 
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function PracticeAreas() {
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <GatsbyImage className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                           image={practiceAreas[4].headerImager.gatsbyImageData} alt="temporary alternate" />
+                           image={practiceAreas[4].headerImager.gatsbyImageData} alt={practiceAreas[4].headerImager.description} />
 
             </div>
           </div>

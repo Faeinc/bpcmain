@@ -140,7 +140,7 @@ class Contact extends React.Component {
                       <span className="sr-only">Email</span>
                     </dt>
                   </dl>
-                  <ul role="list" className="mt-8 flex space-x-12">
+                  {/*<ul role="list" className="mt-8 flex space-x-12">
                     <li>
                       <a className="text-indigo-200 hover:text-indigo-100" href="#">
                         <span className="sr-only">Facebook</span>
@@ -198,7 +198,7 @@ class Contact extends React.Component {
                         </svg>
                       </a>
                     </li>
-                  </ul>
+                  </ul>*/}
                 </div>
 
                 {/* Contact form */}

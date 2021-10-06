@@ -1,7 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import get from 'lodash/get'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
@@ -55,7 +54,7 @@ function classNames(...classes) {
 }
 
 function returnParentMenus(menuItem){
-  return menuItem.isChild == false;
+  return menuItem.isChild === false;
 }
 function returnChildMenus(menuItem){
   return menuItem.isChild;

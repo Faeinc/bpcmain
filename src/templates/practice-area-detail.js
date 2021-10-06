@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import PracticeAreaHero from '../components/practice-area-hero'
 import FeatureDetail from '../components/feature-detail'
-import BlogIndex from '../pages/blog'
 import { graphql } from 'gatsby'
 
 
@@ -37,6 +36,7 @@ export const getData = graphql`
         description
       }
       headerImager {
+          description
           gatsbyImageData(formats: AUTO, placeholder: BLURRED, resizingBehavior: FILL, width: 1500)
         }
       slug

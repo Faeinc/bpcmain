@@ -1,19 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Hero from '../components/hero'
-import ArticlePreview from '../components/article-preview'
 import PracticeAreas from '../components/practiceareas'
-import Navigation from '../components/navigationv2'
 
 class RootIndex extends React.Component {
   render() {
-    const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
+    /*const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const menu = get(this, 'props.data.allContentfulMenuItems.nodes')
-
+*/
     return (
       <Layout location={this.props.location}>
         {/*<Hero
@@ -53,7 +49,7 @@ class RootIndex extends React.Component {
             <img
               className="absolute inset-0 w-full h-full object-cover"
               src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-              alt=""
+              alt="temporary picture"
             />
           </div>
         </main>

@@ -60,6 +60,7 @@ export const pageQuery = graphql`
           }
         }
         heroImage {
+          description
           gatsbyImageData(
             layout: FULL_WIDTH
             placeholder: BLURRED

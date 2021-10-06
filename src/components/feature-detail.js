@@ -2,10 +2,8 @@
 import React from 'react'
 import InboxIcon from '@heroicons/react/outline/InboxIcon'
 import SparklesIcon from '@heroicons/react/outline/SparklesIcon'
-import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-import FeatureDetailLeft from './feature-details-left'
 
 const FeatureDetail = (detail) => {
   const itemsToProcess = detail.detail;
