@@ -3,6 +3,9 @@ import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import PropTypes from "prop-types"
 const Seo = ({ description = '', lang = 'en', meta = [], title, image: metaImage, pathname }) => {
+  if (!title){
+    title = "Beganyi Professional Corporation Law Firm"
+  }
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,6 +24,7 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image: metaImage
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+
   /*console.log(canonical)
   if (canonical){
     const lastChar = canonical.charAt(canonical.length - 1)
@@ -38,6 +42,7 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image: metaImage
         lang,
       }}
       title={title}
+
       defaultTitle={defaultTitle}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       link={

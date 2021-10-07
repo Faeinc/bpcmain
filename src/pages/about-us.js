@@ -2,7 +2,6 @@
 import React from 'react'
 import { ScaleIcon } from '@heroicons/react/outline'
 import Layout from '../components/layout'
-import ExternalLinkIcon from '@heroicons/react/outline/ExternalLinkIcon'
 import Seo from '../components/seo'
 const features = [
   {

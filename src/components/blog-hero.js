@@ -1,5 +1,5 @@
 import React from 'react'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 export default function BlogHero({content}) {
   const image = content.heroImage.gatsbyImageData
   return (

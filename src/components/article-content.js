@@ -1,12 +1,6 @@
 import React from 'react'
-import ReactHtmlParser, { convertNodeToElement } from 'react-html-parser'
-function transformItem(node, index) {
-  // convert <ul> to <ol>
-  if (node.type === 'h2') {
-    node.type = 'ol';
-   // return convertNodeToElement(node, index, transform);
-  }
-}
+import ReactHtmlParser from 'react-html-parser'
+
 export default function ArticleContent({ post }) {
   const text = post.body.childMarkdownRemark.html
   const split = text.split(' ');
@@ -27,8 +21,6 @@ export default function ArticleContent({ post }) {
       }
     }
   )
-
-
   return (
     <div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-max lg:max-w-7xl mx-auto">

@@ -124,9 +124,3 @@ const FeatureDetail = (detail) => {
 
 }
 export default FeatureDetail
-function returnLeft(){
-  return (<h4>Left</h4>)
-}
-function returnRight(){
-  return (<h4>Right</h4>)
-}
