@@ -21,8 +21,9 @@ export default function HomeHeader(branding) {
                   hideWhenDoneDelay: 10,
                 }} avgTypingDelay={90}>
                   <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl text-center">
+                    <span className="block xl:inline text-gray-800">Beganyi P.C.</span> <br/>
                     <span className="block xl:inline text-gray-800">Business | Real Estate</span> <br/>
-                    <span className="block xl:inline text-gray-700">Law Firm </span>
+                    <span className="block xl:inline text-indigo-700 underline">Law Firm </span>
                   </h1>
                 </Typist>
               </div>
