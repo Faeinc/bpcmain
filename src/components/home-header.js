@@ -33,22 +33,6 @@ export default function HomeHeader(branding) {
             <div className="mx-auto container ">
 
               <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10">
-                <div className="py-8" onClick={()=>setActiveArea('business')}>
-                  <div role="alert" className="container mx-auto justify-center">
-                    <div className="relative shadow rounded-md">
-                      <GatsbyImage alt="Business Law" image={businessLawHeader} className="w-full h-full rounded"></GatsbyImage>
-
-                      <div className={activeArea ==='business'?
-                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-10 rounded":
-                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-90 rounded hover:bg-opacity-10 transform hover:-translate-y-1 hover:scale-110"}>
-                        <div className="px-5   flex flex-col items-center">
-                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100">LEARN MORE |> BUSINESS LAW</p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div className="py-8" onClick={()=>setActiveArea('real-estate')}>
                   <div role="alert" className="container mx-auto justify-center">
                     <div className="relative shadow rounded-md">
@@ -59,6 +43,22 @@ export default function HomeHeader(branding) {
 
                       <div className="px-5   flex flex-col items-center">
                           <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100">LEARN MORE |> REAL ESTATE LAW</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="py-8" onClick={()=>setActiveArea('business')}>
+                  <div role="alert" className="container mx-auto justify-center">
+                    <div className="relative shadow rounded-md">
+                      <GatsbyImage alt="Business Law" image={businessLawHeader} className="w-full h-full rounded"></GatsbyImage>
+
+                      <div className={activeArea ==='business'?
+                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-10 rounded":
+                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-90 rounded hover:bg-opacity-10 transform hover:-translate-y-1 hover:scale-110"}>
+                        <div className="px-5   flex flex-col items-center">
+                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100">LEARN MORE |> BUSINESS LAW</p>
 
                         </div>
                       </div>
