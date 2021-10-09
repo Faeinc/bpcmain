@@ -1,10 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import get from 'lodash/get'
 import Layout from '../components/layout'
 import PracticeAreas from '../components/practiceareas'
 import FAQRealEstate from '../components/faq-residential-real-estate'
 import Seo from '../components/seo'
+import HomeHeader from '../components/home-header'
 
 class RootIndex extends React.Component {
   render() {
@@ -12,12 +13,15 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
     const menu = get(this, 'props.data.allContentfulMenuItems.nodes')
 */
+    const [branding] = get(this, 'props.data.allContentfulBranding.nodes')
+
     return (
       <Layout location={this.props.location}>
         <Seo
           title="Business & Real Estate Lawyers"
           pathname={this.props.location.pathname}/>
-        <main className="lg:relative">
+        <HomeHeader branding={branding}></HomeHeader>
+         {/* <main className="lg:relative">
           <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
             <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
@@ -54,8 +58,9 @@ class RootIndex extends React.Component {
               alt="temporary picture"
             />
           </div>
-        </main>
+        </main>*/}
         <PracticeAreas></PracticeAreas>
+        <FAQRealEstate></FAQRealEstate>
 
       </Layout>
     )
@@ -118,5 +123,17 @@ export const pageQuery = graphql`
         }
       }
     }
+   allContentfulBranding {
+    nodes {
+      businessLawHeader {
+        gatsbyImageData
+        description
+      }
+      realEstateHeader {
+        description
+        gatsbyImageData
+      }
+    }
   }
+}
 `
