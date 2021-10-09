@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Popover } from '@headlessui/react'
+import ChevronDownIcon from '@heroicons/react/outline/ChevronDownIcon'
 const faqs = [
   {
     id: 1,
@@ -185,19 +187,53 @@ function FAQResidentialRealEstate() {
                 if (index === (arr.length-1)){
                   return (
                     <div className="flex flex-col mt-12">
-                    <div className="w-full lg:flex items-stretch ">
-                    <div key={faq.id} className="lg:w-1/2 lg:mr-4 lg:mb-0 mb-10">
-                      <h2 className="text-base font-semibold leading-4 text-gray-200">{faq.question}</h2>
-                      <p className="text-base leading-6 text-gray-300 mt-4">{faq.answer}</p>
-                    </div>
-                    </div>
+                      <div className="w-full lg:flex items-stretch ">
+                        <div key={faq.id} className="lg:w-1/2 lg:mr-4 lg:mb-0 mb-10">
+                          <Popover>
+                            {({ open }) => (
+                              <>
+                            <Popover.Button className={`
+                ${open ? '' : 'text-opacity-90'}
+                text-left text-gray-200 group rounded-md inline-flex text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                            ><ChevronDownIcon
+                              className={`${open ? '' : 'text-opacity-70'}
+                                 px-1 h-5 w-5 text-orange-300 group-hover:text-opacity-80 transition ease-in-out duration-150`}
+                            />
+                              {faq.question}
+
+                            </Popover.Button>
+                            <Popover.Panel className="text-base leading-6 text-gray-300 mt-4">
+                              {faq.answer}
+                            </Popover.Panel>
+                            </>
+                              )}
+                          </Popover>
+                        </div>
+                      </div>
                     </div>
                   )
                 }
                 dataToPrint = (
                   <div key={faq.id} className="lg:w-1/2 lg:mr-4 lg:mb-0 mb-10">
-                    <h2 className="text-base font-semibold leading-4 text-gray-200">{faq.question}</h2>
-                    <p className="text-base leading-6 text-gray-300 mt-4">{faq.answer}</p>
+                    <Popover>
+                      {({ open }) => (
+                        <>
+                      <Popover.Button className={`
+                ${open ? '' : 'text-opacity-90'}
+                text-left text-gray-200 group rounded-md inline-flex text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                      ><ChevronDownIcon
+                        className={`${open ? '' : 'text-opacity-70'}
+                          px-1 h-5 w-5 text-orange-300 group-hover:text-opacity-80 transition ease-in-out duration-150`}
+                      />
+                        {faq.question}
+
+                      </Popover.Button>
+                      <Popover.Panel className="text-base leading-6 text-gray-300 mt-4">
+                        {faq.answer}
+                      </Popover.Panel>
+                      </>
+                        )}
+                    </Popover>
                   </div>
                 )
               return
@@ -206,13 +242,32 @@ function FAQResidentialRealEstate() {
                 count++
                 return(
                   <div className="flex flex-col mt-12">
-                  <div className="w-full lg:flex items-stretch ">
-                    {dataToPrint}
-                  <div key={faq.id} className="lg:w-1/2 mr-4">
-                    <h2 className="text-base font-semibold leading-4 text-gray-300">{faq.question}</h2>
-                    <p className="text-base leading-6 text-gray-300 mt-4">{faq.answer}</p>
-                  </div>
-                  </div>
+                    <div className="w-full lg:flex items-stretch ">
+                      {dataToPrint}
+                      <div key={faq.id} className="lg:w-1/2 mr-4">
+                        <Popover>
+                          {({ open }) => (
+                            <>
+                          <Popover.Button className={`
+                ${open ? '' : 'text-opacity-90'}
+                text-left text-gray-200 group rounded-md inline-flex text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                          ><ChevronDownIcon
+                            className={`${open ? '' : 'text-opacity-70'}
+                              px-1   h-5 w-5 text-orange-300 group-hover:text-opacity-80 transition ease-in-out duration-150`}
+                          />
+                            {faq.question}
+
+                          </Popover.Button>
+                          <Popover.Panel className="text-base leading-6 text-gray-300 mt-4">
+                            {faq.answer}
+                          </Popover.Panel>
+                            </>
+                          )}
+
+                        </Popover>
+
+                      </div>
+                    </div>
                   </div>
                 )
               }

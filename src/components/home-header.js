@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GatsbyImage } from 'gatsby-plugin-image'
+import Typist from 'react-typist';
 export default function HomeHeader(branding) {
   const [activeArea, setActiveArea] = useState('real-estate');
 
@@ -12,10 +13,18 @@ export default function HomeHeader(branding) {
           <div className="pt-20 lg:px-4 ">
              <div className="2xl:mx-auto 2xl:container w-full flex justify-center items-center flex-col">
               <div className="mb-20">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl text-center">
-                  <span className="block xl:inline text-gray-800">Business | Real Estate</span> <br/>
-                  <span className="block xl:inline text-gray-700">Law Firm </span>
-                </h1>
+                <Typist cursor={{
+                  show: true,
+                  blink: true,
+                  element: '',
+                  hideWhenDone: true,
+                  hideWhenDoneDelay: 10,
+                }} avgTypingDelay={90}>
+                  <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl text-center">
+                    <span className="block xl:inline text-gray-800">Business | Real Estate</span> <br/>
+                    <span className="block xl:inline text-gray-700">Law Firm </span>
+                  </h1>
+                </Typist>
               </div>
             </div>
           </div>
