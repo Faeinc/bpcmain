@@ -18,31 +18,31 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 const solutions = [
   {
     name: 'Business Law',
-    description: 'Get a better understanding of where your traffic is coming from.',
+    description: '',
     href: '/practice-areas/business-law/',
     icon: BriefcaseIcon,
   },
   {
     name: 'Commercial Real Estate',
-    description: 'Speak directly to your customers in a more meaningful way.',
+    description: '',
     href: '/practice-areas/commercial-real-estate/',
     icon: OfficeBuildingIcon,
   },
   {
     name: 'Mergers & Acquisitions',
-    description: "Connect with third-party tools that you're already using.",
+    description: "",
     href: '/practice-areas/mergers-and-acquisitions/',
     icon: PresentationChartBarIcon,
   },
   {
     name: 'Residential Real Estate',
-    description: "Connect with third-party tools that you're already using.",
+    description: "",
     href: '/practice-areas/residential-real-estate/',
     icon: QuestionMarkCircleIcon,
   },
   {
     name: 'Tax, Wills & Estates Planning',
-    description: "Connect with third-party tools that you're already using.",
+    description: "",
     href: '/practice-areas/tax/',
     icon: ReceiptTaxIcon,
   },
@@ -100,6 +100,7 @@ const Navigation = () => {
       const menuItems = db.allContentfulMenuItems.nodes;
       const parentNodes = menuItems.filter(returnParentMenus);
       const childNodes = menuItems.filter(returnChildMenus);
+      console.log(childNodes)
       const practiceAreaNodes = childNodes.filter(returnPracticeAreas)
       const logoImage = db.allContentfulBranding.edges[0].node.logoRed.gatsbyImageData
 
@@ -111,7 +112,7 @@ const Navigation = () => {
           className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-auto">
             <a href="/">
-              <span className="sr-only">Beganyi Professional Corporation</span>
+              <span className="sr-only">Beganyi Professional Corporation Law Firm</span>
               <GatsbyImage className="h-8 w-auto sm:h-10" alt="Beganyi Professional Corporation Law Firm Logo" image={logoImage}></GatsbyImage>
 
             </a>
