@@ -65,9 +65,8 @@ export default function HomeHeader(props) {
                       <div className={activeArea ==='real-estate'?
                         "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-10 rounded hover:bg-opacity-10":
                         "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-90 rounded hover:bg-opacity-10 transform hover:-translate-y-1 hover:scale-110"}>
-
                       <div className="px-5   flex flex-col items-center">
-                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100"> {activeArea==='real-estate'? 'CURRENT SELECTION': 'LEARN MORE'} |> REAL ESTATE LAW</p>
+                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100"> {activeArea==='real-estate'? 'SELECTED': 'LEARN MORE'} |> RESIDENTIAL REAL ESTATE LAW</p>
 
                         </div>
                       </div>
@@ -86,7 +85,7 @@ export default function HomeHeader(props) {
                         "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-10 rounded":
                         "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-90 rounded hover:bg-opacity-10 transform hover:-translate-y-1 hover:scale-110"}>
                         <div className="px-5   flex flex-col items-center">
-                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100">{activeArea==='business'? 'CURRENT SELECTION': 'LEARN MORE'} |> BUSINESS LAW</p>
+                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100">{activeArea==='business'? 'SELECTED': 'LEARN MORE'} |> BUSINESS LAW</p>
 
                         </div>
                       </div>
