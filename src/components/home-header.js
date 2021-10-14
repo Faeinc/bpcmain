@@ -14,15 +14,15 @@ export default function HomeHeader(props) {
       }
       realEstateHeader {
         description
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 640)
       }
       mergersHeader {
         description
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 6400)
       }
       commercialRealEstateHeader {
         description
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 6400)
       }
     }
   }
