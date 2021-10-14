@@ -16,6 +16,14 @@ export default function HomeHeader(props) {
         description
         gatsbyImageData
       }
+      mergersHeader {
+        description
+        gatsbyImageData
+      }
+      commercialRealEstateHeader {
+        description
+        gatsbyImageData
+      }
     }
   }
 }
@@ -28,6 +36,8 @@ export default function HomeHeader(props) {
 
   const businessLawHeader = branding.businessLawHeader.gatsbyImageData
   const realEstateHeader = branding.realEstateHeader.gatsbyImageData
+  const commercialRealEstateHeader = branding.commercialRealEstateHeader.gatsbyImageData
+  const mergersHeader = branding.mergersHeader.gatsbyImageData
   return (
     <>
       <div className="bg-gray-1000">
@@ -54,7 +64,7 @@ export default function HomeHeader(props) {
           <div className="2xl:mx-auto 2xl:container w-full mt-24 flex flex-col justify-between items-center">
             <div className="mx-auto container ">
 
-              <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10">
+              <div className="grid sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-10">
                 <div className="py-8" onClick={()=>{
                   setActiveArea('real-estate')
                   props.onChangeName('real-estate')
@@ -67,6 +77,24 @@ export default function HomeHeader(props) {
                         "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-90 rounded hover:bg-opacity-10 transform hover:-translate-y-1 hover:scale-110"}>
                       <div className="px-5   flex flex-col items-center">
                           <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100"> {activeArea==='real-estate'? 'SELECTED': 'LEARN MORE'} |> RESIDENTIAL REAL ESTATE LAW</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="py-8" onClick={()=>{
+                  setActiveArea('commercial-real-estate')
+                  props.onChangeName('commercial-real-estate')
+                }}>
+                  <div role="alert" className="container mx-auto justify-center">
+                    <div className="relative shadow rounded-md">
+                      <GatsbyImage className="w-full h-full rounded" alt="Comercial Real Estate Law" image={commercialRealEstateHeader}></GatsbyImage>
+                      <div className={activeArea ==='commercial-real-estate'?
+                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-10 rounded hover:bg-opacity-10":
+                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-90 rounded hover:bg-opacity-10 transform hover:-translate-y-1 hover:scale-110"}>
+                        <div className="px-5   flex flex-col items-center">
+                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100"> {activeArea==='commercial-real-estate'? 'SELECTED': 'LEARN MORE'} |> COMMERCIAL REAL ESTATE LAW</p>
 
                         </div>
                       </div>
@@ -92,6 +120,27 @@ export default function HomeHeader(props) {
                     </div>
                   </div>
                 </div>
+                <div className="py-8" onClick={()=>{
+                  setActiveArea('mergers')
+                  props.onChangeName('mergers')
+                }}>
+                  <div role="alert" className="container mx-auto justify-center">
+                    <div className="relative shadow rounded-md">
+                      <GatsbyImage alt="Mergers and Acquisitions" image={mergersHeader} className="w-full h-full rounded"></GatsbyImage>
+
+                      <div className={activeArea ==='mergers'?
+                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-10 rounded":
+                        "flex items-center justify-center w-full h-full absolute inset-0 bg-blue-700  bg-opacity-90 rounded hover:bg-opacity-10 transform hover:-translate-y-1 hover:scale-110"}>
+                        <div className="px-5   flex flex-col items-center">
+                          <p className="text-base sm:text-xl md:text-2xl font-bold md:leading-8 text-center text-gray-100">{activeArea==='mergers'? 'SELECTED': 'LEARN MORE'} |> MERGERS & ACQUISITIONS</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
             {/*<div className="md:-mt-40 -mt-20 xl:px-40 md:px-20 px-6 flex justify-center items-center">
