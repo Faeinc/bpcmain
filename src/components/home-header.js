@@ -9,20 +9,20 @@ export default function HomeHeader(props) {
   allContentfulBranding {
     nodes {
       businessLawHeader {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
         description
       }
       realEstateHeader {
         description
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
       }
       mergersHeader {
         description
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
       }
       commercialRealEstateHeader {
         description
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
       }
     }
   }
