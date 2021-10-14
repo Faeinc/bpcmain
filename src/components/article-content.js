@@ -9,18 +9,37 @@ export default function ArticleContent({ post }) {
   const firstHalfOfArray = split.slice(0, bottomHalf).join(" ") + "</p>"
   const secondHalfOfArray = "<p>"+ split.slice(split.length-(topHalf)).join(" ")
   let parse2 = ReactHtmlParser(firstHalfOfArray);
-   parse2.forEach(
-    function(item, index, arr) {
+  let parse3 = ReactHtmlParser(secondHalfOfArray);
+  function modifyText(item, index, arr) {
 
-      if (item.type === 'h2') {
-        arr[index] = React.createElement('h3', {className: 'mt-6 prose prose-indigo leading-6 text-indigo-600 font-semibold tracking-wide uppercase', children:item.props.children}, )
+    if (item.type === 'h2') {
+      arr[index] = React.createElement('h2', {className: 'mt-6 prose prose-indigo leading-6 text-indigo-600 font-semibold tracking-wide uppercase', children:item.props.children}, )
 
-      }
-      else{
-        arr[index] = item;
-      }
     }
+    else if (item.type === 'h3') {
+      arr[index] = React.createElement('h3', {className: 'mt-6 prose prose-indigo leading-6 text-indigo-600 font-semibold tracking-wide uppercase', children:item.props.children}, )
+
+    }
+    else if (item.type === 'h4') {
+      arr[index] = React.createElement('h4', {className: 'mt-6 prose prose-indigo leading-6 text-indigo-600 font-semibold tracking-wide uppercase', children:item.props.children}, )
+
+    }
+    else if (item.type === 'h5') {
+      arr[index] = React.createElement('h4', {className: 'mt-6 prose prose-indigo leading-6 text-indigo-600 font-semibold tracking-wide uppercase', children:item.props.children}, )
+
+    }
+    else if (item.type === 'h1') {
+      arr[index] = React.createElement('h1', {className: 'mt-6 prose prose-indigo leading-6 text-indigo-600 font-semibold tracking-wide uppercase', children:item.props.children}, )
+
+    }
+    else{
+      arr[index] = item;
+    }
+  }
+  parse2.forEach(
+    modifyText
   )
+  parse3.forEach(modifyText)
   return (
     <div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-max lg:max-w-7xl mx-auto">
@@ -78,19 +97,20 @@ export default function ArticleContent({ post }) {
           </svg>
           <div className="relative md:bg-white md:p-6">
             <div className="lg:grid lg:grid-cols-2 lg:gap-6">
-              <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
-                <div dangerouslySetInnerHTML={{
+              <div className="text-gray-500 lg:mt-0">
+               {/* <div dangerouslySetInnerHTML={{
                   __html: firstHalfOfArray
-                }} className="text-justify" />
+                }} className="text-justify" />*/}
                 {/*<div>
                 {parse2}
               </div>*/}
+                {parse2}
               </div>
-              <div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
-                <div dangerouslySetInnerHTML={{
+              <div className="text-gray-500 lg:mt-0">
+               {/* <div dangerouslySetInnerHTML={{
                   __html: secondHalfOfArray
-                }} className="text-justify" />
-
+                }} className="text-justify" />*/}
+                {parse3}
               </div>
             </div>
             <div className="mt-8 inline-flex rounded-md shadow">

@@ -1,9 +1,10 @@
 import React from "react";
 const faqs = [
   {
-    question: 'How do you make holy water?',
+    question: 'Understanding the standard OREA Purchase and Sale Agreement',
     answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+      'This guide will help you understand that key clauses found in the standard form OREA residential purchase agreement.',
+    url: "/guides/understanding-orea-agreemeent/"
   },
   // More questions...
 ]
@@ -26,7 +27,7 @@ export default function ResourcesResidentialRealEstate() {
             <dl className="space-y-12">
               {faqs.map((faq) => (
                 <div key={faq.question}>
-                  <dt className="text-lg leading-6 font-medium text-gray-900">{faq.question}</dt>
+                  <dt className="text-lg leading-6 font-medium text-indigo-600 hover:text-indigo-500"><a href={faq.url}> {faq.question}</a></dt>
                   <dd className="mt-2 text-base text-gray-500">{faq.answer}</dd>
                 </div>
               ))}

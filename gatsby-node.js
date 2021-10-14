@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve('./src/templates/blog-post.js')
   const practiceAreaPage = path.resolve('./src/templates/practice-area-detail.js')
+  const guidePage = path.resolve('./src/templates/guides.js')
   const result = await graphql(
     `
       {
@@ -35,10 +36,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     }
+`)
+  const guides = await graphql(
+    `
+    {
+        allContentfulGuides {
+    nodes {
+      
+        heroImage {
+          description
+          gatsbyImageData
+          title
+        }
+        practiceArea {
+          practiceAreaId
+        }
+        title
+        body {
+          id
+          body
+        }
+        slug
+      }
+    }
+    }
 `
   )
 
-  if (result.errors || practiceAreas.errors) {
+  if (result.errors || practiceAreas.errors || guides.errors) {
     reporter.panicOnBuild(
       `There was an error loading your Contentful posts`,
       result.errors
@@ -46,8 +71,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
+
   const posts = result.data.allContentfulBlogPost.nodes
   const practiceAreasResults = practiceAreas.data.allContentfulPracticeAreas.nodes
+  const guidesResults = guides.data.allContentfulGuides.nodes
 
   // Create blog posts pages
   // But only if there's at least one blog post found in Contentful
@@ -79,6 +106,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         context: {
           slug: practiceAreasResults.slug,
           practiceAreaId: practiceAreasResults.practiceAreaId,
+
+        },
+      })
+    })
+  }
+  if (guidesResults.length > 0) {
+    guidesResults.forEach((guidesResults, index) => {
+    console.log(guidesResults)
+      createPage({
+        path: `/guides/${guidesResults.slug}/`,
+        component: guidePage,
+        context: {
+          slug: guidesResults.slug,
 
         },
       })
