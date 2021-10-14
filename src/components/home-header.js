@@ -29,11 +29,9 @@ export default function HomeHeader(props) {
 }
 
 `
-
   const db = useStaticQuery(getData);
   const branding = db.allContentfulBranding.nodes[0]
   const [activeArea, setActiveArea] = useState('real-estate');
-
   const businessLawHeader = branding.businessLawHeader.gatsbyImageData
   const realEstateHeader = branding.realEstateHeader.gatsbyImageData
   const commercialRealEstateHeader = branding.commercialRealEstateHeader.gatsbyImageData
