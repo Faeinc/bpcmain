@@ -18,11 +18,11 @@ export default function HomeHeader(props) {
       }
       mergersHeader {
         description
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 6400)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 640)
       }
       commercialRealEstateHeader {
         description
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 6400)
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 640)
       }
     }
   }
