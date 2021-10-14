@@ -94,6 +94,28 @@ const faqs = [
     answer:
       "Title insurance is a product that protects your (or a lender’s) ownership interest in a property against losses incurred as a result of undetected or unknown defects. For example, a title insurance may protect you if you discover, after closing, that a part of your garden shed encroaches onto your neighbours property and your neighbour is now demanding that the shed be removed. A policy may also provide coverage for certain other off-title risks, such as real property tax arrears. However, it is important to know that the risks must exist as of the policy date and be unknown to you. If the risks arises after the policy date or the insurer determines you were aware of the risk prior to the policy date, the insurer will likely deny coverage."
   },
+  {
+    id: 10,
+    category: {
+      "name": "Purchase",
+      "categoryId": 2
+    },
+    question: "As a buyer, can I assign my purchase and sale agreement to another person?",
+    answer:
+      "Unless the purchase and sale agreement provides to the contrary, a buyer may assign the Agreement to another person without the seller’s consent."
+  },
+  {
+    id: 11,
+    category: {
+      "name": "Purchase",
+      "categoryId": 2
+    },
+    question: "The property description dimensions are qualified with the term “more or less”. What does this mean?",
+    answer:
+      "The courts have considered the term “more or less” on several occasions. Generally, the term is meant to protect the seller from a minor discrepancy in the property’s dimensions but will not protect the seller from a substantial discrepancy or outright fraud. In such instances, the buyer may be able to terminate the transaction.  \n" +
+      "\n" +
+      "If you’re the buyer and are relying on the dimensions to be accurate, you may want to delete the term “more or less” to require the seller to provide a precise measurement of the property."
+  },
   // More questions...
 ]
 

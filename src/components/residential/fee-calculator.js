@@ -56,7 +56,6 @@ function FeeCalculator() {
       level2LTT = tempPurchasePrice * 0.01
       tempPurchasePrice = 0
     }
-    console.log(level2LTT)
     if (tempPurchasePrice> 149999.99){
       level3LTT = 0.015 * 149999.99
       tempPurchasePrice = tempPurchasePrice-149999.99
@@ -64,7 +63,6 @@ function FeeCalculator() {
       level3LTT = tempPurchasePrice * 0.015
       tempPurchasePrice = 0;
     }
-    console.log(level3LTT)
     if (tempPurchasePrice>1599999.99){
       level4LTT = 1599999.99 * 0.02
       tempPurchasePrice = tempPurchasePrice - 1599999.99
@@ -103,12 +101,15 @@ function FeeCalculator() {
     setTorontoLTT(totalTorontoLTT)
     const legalFees = transactionType==='purchase'? 999: transactionType==='sale' ? 899: 799
     const taxes = 0.13*legalFees
-    let total = ontarioLTT + torontoLTT + legalFees + taxes
+    let total = 0.00;
     if (transactionType === 'sale'){
-      total = total + 73.45
+      total = legalFees + taxes + total + 73.45
     }
     if (transactionType === 'purchase'){
-      total = total + 155.24
+      total = ontarioLTT + torontoLTT + legalFees + taxes + 155.24
+    }
+    if (transactionType === 'refinance'){
+      total = legalFees + taxes + 77.62
     }
     setTotalFees(total)
   }, [purchasePrice, firstTimeBuyer, inToronto]);
@@ -348,7 +349,11 @@ function FeeCalculator() {
                               <dt className="text-gray-600">Government Registration Fees ($77.62 Each)</dt>
                               <dd className="font-medium text-gray-900">$155.24</dd>
                             </div>
-                            <div className={transactionType==='purchase'? "py-4 flex items-center justify-between": "hidden"}>
+                            <div className={transactionType==='refinance'? "py-4 flex items-center justify-between": "hidden"}>
+                              <dt className="text-gray-600">Government Registration Fees ($77.62 Each)</dt>
+                              <dd className="font-medium text-gray-900">$77.62</dd>
+                            </div>
+                            <div className="py-4 flex items-center justify-between text-left">
                               <dt className="text-gray-600">Other Disbursements (If Applicable): Fees Charged By Govt, Teranet Fees, Costs Of Condo Status Certificate, Lawyers Creditor's Letters And Title Insurance</dt>
                               <dd className="font-medium text-gray-900">TBD</dd>
                             </div>
@@ -363,30 +368,47 @@ function FeeCalculator() {
                           </dl>
                         </div>
 
-                        <div className="flex-1 bg-white px-6 py-8 lg:p-12">
-                          <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Lifetime Membership</h3>
+                        <div className={transactionType==='purchase'? 'flex-1 bg-white px-6 py-8 lg:p-12': "hidden"}>
+                          <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Important Information</h3>
                           <p className="mt-6 text-base text-gray-500">
-                            Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis
-                            repellendus etur quidem assumenda.
+                            This quote applies to residential real estate transactions for a typical purchase with up to one mortgage through a commercial lender. Private mortgages are subject to additional fees.
                           </p>
-                          <div className="mt-8">
-                            <div className="flex items-center">
-                              <h4 className="flex-shrink-0 pr-4 bg-white text-sm tracking-wider font-semibold uppercase text-indigo-600">
-                                What's included
-                              </h4>
-                              <div className="flex-1 border-t-2 border-gray-200" />
-                            </div>
-                            <ul role="list" className="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
-                              {/*{includedFeatures.map((feature) => (
-                                <li key={feature} className="flex items-start lg:col-span-1">
-                                  <div className="flex-shrink-0">
-                                    <CheckCircleIcon className="h-5 w-5 text-green-400" aria-hidden="true" />
-                                  </div>
-                                  <p className="ml-3 text-sm text-gray-700">{feature}</p>
-                                </li>
-                              ))}*/}
-                            </ul>
-                          </div>
+                          <p className="mt-6 text-base text-gray-500">
+                            Our disbursements (if applicable) comply with LSO Rule 4.2-2.1:
+                            HST, Ontario and Toronto land transfer tax, government registration fees, Teranet fees, costs of condo status certificate, cost of tax certificates, lawyers creditor's letters and title insurance vary from transaction to transaction and are not included in this quote.
+                          </p>
+                          <p className="mt-6 text-base text-gray-500">
+                            If we do not receive your Agreement of Purchase and Sale and mortgage instructions at least five business days prior to the date of your closing, additional fees may apply to handle rush requests. If any issues or unforeseen circumstances arise, we will advise you immediately.
+                          </p>
+
+                        </div>
+                        <div className={transactionType==='sale'? 'flex-1 bg-white px-6 py-8 lg:p-12': "hidden"}>
+                          <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Important Information</h3>
+                          <p className="mt-6 text-base text-gray-500">
+                            This quote applies to residential real estate transactions for a typical sale requiring, at most, one mortgage discharge. Discharge of additional encumbrances or correction of title issues may be subject to additional fees.
+                          </p>
+                          <p className="mt-6 text-base text-gray-500">
+                            Our disbursements (if applicable) comply with LSO Rule 4.2-2.1:
+                            HST, Ontario and Toronto land transfer tax, government registration fees, Teranet fees, costs of condo status certificate, cost of tax certificates, lawyers creditor's letters and title insurance vary from transaction to transaction and are not included in this quote.
+                          </p>
+                          <p className="mt-6 text-base text-gray-500">
+                            If we do not receive your Agreement of Purchase and Sale at least five business days prior to the date of your closing, additional fees may apply to handle rush requests. If any issues or unforeseen circumstances arise, we will advise you immediately.
+                          </p>
+
+                        </div>
+                        <div className={transactionType==='refinance'? 'flex-1 bg-white px-6 py-8 lg:p-12': "hidden"}>
+                          <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Important Information</h3>
+                          <p className="mt-6 text-base text-gray-500">
+                            This quote applies to residential real estate transactions for a typical mortgage refinance through a bank or credit union.  Private mortgages may be subject to additional fees.
+                          </p>
+                          <p className="mt-6 text-base text-gray-500">
+                            Our disbursements (if applicable) comply with LSO Rule 4.2-2.1:
+                            HST, Ontario and Toronto land transfer tax, government registration fees, Teranet fees, costs of condo status certificate, cost of tax certificates, lawyers creditor's letters and title insurance vary from transaction to transaction and are not included in this quote.
+                          </p>
+                          <p className="mt-6 text-base text-gray-500">
+                            If any issues or unforeseen circumstances arise, we will advise you immediately.
+                          </p>
+
                         </div>
                        </div>
                     </div>
@@ -408,10 +430,10 @@ function FeeCalculator() {
           <button
             type="button"
             onClick={()=>{
-             /* setIsThreeVisible(false)
+              setIsThreeVisible(false)
               setIsStepTwoVisible(false)
               setIsStepOneVisible(true)
-              setOpen(true)*/
+              setOpen(true)
             }}
             className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
           >
