@@ -12,8 +12,8 @@ export default function CommercialHeader() {
         <div className="flex flex-col justify-center w-full md:w-1/2 px-4 md:pr-12">
           <p className="uppercase text-lg text-gray-600 leading-normal">Commercial Real Estate</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight text-gray-800 pt-4">
-            Fixed Rate Fees<br />
-            For Residential Transactions
+            Experienced<br />
+            Commercial Real Estate Lawyer
           </h2>
           <p className="text-lg text-gray-600 leading-normal pt-4">
             Are you looking for a lawyer to help with your commercial real estate transaction?
