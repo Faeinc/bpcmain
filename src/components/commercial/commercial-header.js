@@ -16,8 +16,34 @@ export default function CommercialHeader() {
             For Residential Transactions
           </h2>
           <p className="text-lg text-gray-600 leading-normal pt-4">
-            Whether you are a first time home buyer or an experienced residential real estate investor, we can assist you with closing your residential purchase, sale and refinance transactions. We represent individuals, families and businesses in all kinds of
-            residential real estate matters.
+            Are you looking for a lawyer to help with your commercial real estate transaction?
+          </p>
+          <p className="text-lg text-gray-600 leading-normal pt-4">
+            At Beganyi Professional Corporation Law Firm, we have extensive knowledge of all
+            aspects of commercial real estate transactions and can assist with your commercial
+            real estate needs, including leasing, financing, acquisition and disposition.
+            With our extensive business and real estate law experience, our firm offers
+            comprehensive guidance and practical legal advice to commercial real estate clients.
+          </p>
+          <p className="text-lg text-gray-600 leading-normal pt-4">
+            We are also experienced in representing landlords on issues such as lease
+            negotiations, defaults under leases or other agreements between landlord and
+            tenant. We also represent property managers in leasing matters involving
+            residential units as well as office space.
+          </p>
+          <p className="text-lg text-gray-600 leading-normal pt-4">
+            When you hire us, you will receive professional service.
+            We are committed to providing creative solutions tailored
+            specifically for your project’s unique challenges. Our goal is not
+            only to achieve success but also ensure that our clients feel confident
+            during their at every step so they know they have someone by their side
+            who understands their goals and objectives at every turn. We pride ourselves
+            on being responsive – we understand how important it is for our clients to be
+            able communicate quickly without having any obstacles in between them and us!
+          </p>
+          <p className="text-lg text-gray-600 leading-normal pt-4">
+            Contact us today if you need assistance with your next commercial real
+            estate transaction.
           </p>
 
         </div>
@@ -32,12 +58,19 @@ export default function CommercialHeader() {
             </div>
             <div className="mt-1">
               <h4 className="text-lg font-bold leading-tight text-white">Commercial Real Estate Transactions (Buying & Selling)</h4>
-              <p className="text-base text-white leading-normal pt-2">If you’re buying a home or condo,
-                you’ll need a real estate lawyer to represent you.
-                A law firm with extensive experience in residential real estate purchases
-                is invaluable to minimize your risk and stress levels with one of life’s biggest
-                financial commitments. Let Beganyi Professional Corporation Law Firm help you
-                with your next home purchase.</p>
+              <p className="text-base text-white leading-normal pt-2">
+                When you’re buying or selling a commercial property, you need a real estate lawyer
+                to protect your interests. At Beganyi Professional Corporation Law Firm we
+                have extensive experience handling these kinds of transactions, so we know what
+                needs to be done. We can help you with every step of the process from start to
+                finish – from drafting the purchase agreement, reviewing leases,
+                to negotiating the transaction and closing the sale or purchase.
+              </p>
+              <p className="text-base text-white leading-normal pt-2">
+                If you want to buy or sell a commercial building, contact Beganyi Professional
+                Corporation Law Firm right away for expert advice on how best to handle your
+                situation. We’ll make sure everything goes smoothly from start to finish!
+              </p>
             </div>
           </div>
           <div className="flex pb-10">
@@ -50,16 +83,18 @@ export default function CommercialHeader() {
             </div>
             <div className="mt-1">
               <h4 className="text-lg font-bold leading-tight text-white">Commercial Leases & Negotiation</h4>
-              <p className="text-base text-white leading-normal pt-2">In a hot market like Toronto,
-                or Mississauga selling a home can be quite exciting.
-                If you’ve owned your home for a number of years, you’ve likely generated quite a
-                bit of profit. However, before you can watch your bank balance grow, you
-                need to make sure that your home sells successfully. Listing a home and
-                selling it through the agent is just the first step. You will need a
-                real estate lawyer to close the transaction and to help you deal with any
-                issues or concerns that are brought up by the purchaser’s lawyer.
-                Our firm can help you navigate this process. Let Beganyi Professional
-                Corporation Law Firm help you with your next home sale.</p>
+              <p className="text-base text-white leading-normal pt-2">
+                You want to open a new store or expand your business, but you don't know the
+                legal implications of leasing commercial property.
+              </p>
+              <p className="text-base text-white leading-normal pt-2">
+                It's important that you have a lawyer review your lease agreement before you sign
+                it.
+              </p>
+              <p className="text-base text-white leading-normal pt-2">
+                Beganyi Professional Corporation Law Firm is an experienced and professional law firm with over 14 years’ experience in commercial real estate transactions and contract drafting. We can help you negotiate favorable terms in a lease agreement so that your business interests are protected. Our services include reviewing leases, negotiating better terms for tenants, and resolving landlord-tenant disputes.
+                If you want to learn more about how we can help you please contact us today!
+              </p>
             </div>
           </div>
           <div className="flex pb-10">
@@ -85,7 +120,7 @@ export default function CommercialHeader() {
               </p>
             </div>
           </div>
-          <div className="flex">
+          {/*<div className="flex">
             <div className="mr-5 text-white">
               <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" />
@@ -107,7 +142,7 @@ export default function CommercialHeader() {
                 please contact us.
               </p>
             </div>
-          </div>
+          </div>*/}
         </div>
       </div>
     </section>
