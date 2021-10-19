@@ -21,7 +21,7 @@ const HomeCore = (props) => {
       <ResidentialRealEstateLaw isSelectedPractice={practiceAreaSelected==='real-estate'}></ResidentialRealEstateLaw>
       <CommercialRealEstateLaw isSelectedPractice={practiceAreaSelected==='commercial-real-estate'}></CommercialRealEstateLaw>
       <BusinessLaw isSelectedPractice={practiceAreaSelected==='business'}></BusinessLaw>
-      {/*<MergerLaw isSelectedPractice={practiceAreaSelected==='mergers'}></MergerLaw>*/}
+      <MergerLaw isSelectedPractice={practiceAreaSelected==='mergers'}></MergerLaw>
     </>
   )
 }

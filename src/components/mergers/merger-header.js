@@ -12,12 +12,22 @@ export default function MergerHeader() {
         <div className="flex flex-col justify-center w-full md:w-1/2 px-4 md:pr-12">
           <p className="uppercase text-lg text-gray-600 leading-normal">Mergers & Acquisitions</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight text-gray-800 pt-4">
-            Fixed Rate Fees<br />
-            For Residential Transactions
+            Targeted Advice<br />
+            For Purchasing or Selling a Business
           </h2>
           <p className="text-lg text-gray-600 leading-normal pt-4">
-            Whether you are a first time home buyer or an experienced residential real estate investor, we can assist you with closing your residential purchase, sale and refinance transactions. We represent individuals, families and businesses in all kinds of
-            residential real estate matters.
+            If you're considering buying or selling a business, you'll need to know how the
+            process works and what your legal rights are.
+          </p>
+          <p className="text-lg text-gray-600 leading-normal pt-4">
+            We have years of experience in business law and we've handled countless transactions
+            for businesses throughout Ontario. When you retain us, we will walk you through the
+            entire process from start to finish so that everything goes smoothly without any
+            complications along the way. We offer our clients knowledge and expertise so that
+            they can focus on running their companies rather than dealing with legal issues.
+          </p>
+          <p className="text-lg text-gray-600 leading-normal pt-4">
+            If you are looking for an experienced lawyer to handle your next transaction or if you need assistance with any aspect of buying or selling your next business, we will be happy to work with you. Contact us today at 647-977-7749!
           </p>
 
         </div>
@@ -32,12 +42,23 @@ export default function MergerHeader() {
             </div>
             <div className="mt-1">
               <h4 className="text-lg font-bold leading-tight text-white">Asset Acquisitions</h4>
-              <p className="text-base text-white leading-normal pt-2">If you’re buying a home or condo,
-                you’ll need a real estate lawyer to represent you.
-                A law firm with extensive experience in residential real estate purchases
-                is invaluable to minimize your risk and stress levels with one of life’s biggest
-                financial commitments. Let Beganyi Professional Corporation Law Firm help you
-                with your next home purchase.</p>
+              <p className="text-base text-white leading-normal pt-2">
+                The sale of assets is quite different from the sale of shares in a corporation.
+                It requires all kinds of legal documentation to transfer ownership rights for
+                each asset being sold or purchased in the deal.
+              </p>
+              <p className="text-base text-white leading-normal pt-2">
+                Beganyi Professional Corporation Law Firm is here for you. We have extensive
+                experience in drafting agreements that will help make sure your business
+                transactions go smoothly when it comes to business purchases or sales
+                structured as asset deals.  We can handle all aspects of asset sale agreements.
+                We can also advise on whether there are any risks involved with third party
+                consents for changes to control provisions in contracts, leases, licenses
+                or permits that could result from such deals.
+              </p>
+              <p className="text-base text-white leading-normal pt-2">
+                Contact us today at (647) 977-7749 and we'll be happy to assist with drafting an agreement that will suit your needs perfectly.
+              </p>
             </div>
           </div>
           <div className="flex pb-10">
